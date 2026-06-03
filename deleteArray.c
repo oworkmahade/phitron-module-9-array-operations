@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d", &n);
+
+    int arr[n];
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("arr[%d] = %d, ", i, arr[i]);
+    }
+    printf("\n");
+    int idx;
+    scanf("%d", &idx);
+
+    for (int i = idx; i < n - 1; i++)
+    {
+        arr[i] = arr[i + 1];
+    }
+
+    n--;
+    for (int i = 0; i < n; i++)
+    {
+        printf("arr[%d] = %d, ", i, arr[i]);
+    }
+    return 0;
+}
